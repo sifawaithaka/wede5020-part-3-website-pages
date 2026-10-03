@@ -1,0 +1,12 @@
+/* Custom Variables */
+:root {
+  --primary-color: #F476b9;
+  --secondary-color: #C9B0BE;
+  --accent-color: #2C82F2;
+  --bg-color: #F3F1F2;
+  --card-bg: #FAFAFA;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --border-color: #000000;
+  --focus-ring: #2980b9;
+}
