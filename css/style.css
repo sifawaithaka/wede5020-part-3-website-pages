@@ -159,3 +159,89 @@ p {
   text-align: center;
   color: var(--colour-on-secondary);
 }
+
+/*Ask For Help Page Styles*/
+.emergency-banner {
+  background-color: var(--colour-accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.form-container {
+  background-color: var(--colour-surface);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--colour-border);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+/*Donate Page Styles*/
+.donation-section {
+  background-color: var(--colour-surface);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.donation-amount-btn {
+  background-color: var(--colour-secondary);
+  color: var(--colour-on-secondary);
+  border: none;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.donation-amount-btn:hover {
+  outline: 3px solid var(--colour-accent);
+}
+
+.donation-amount-btn.selected {
+  outline: 3px solid var(--colour-accent);
+}
+
+.btn-donate-submit {
+  background-color: var(--colour-accent);
+  color: #ffffff;
+  border: none;
+  padding: 1rem 4rem;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
