@@ -134,7 +134,7 @@ p {
 
 /*Urgent Needs Section*/
 .urgent-needs-banner {
-  background-colour: var (--colour-accent);
+  background-color: var (--colour-accent);
   padding: 1rem 1.5rem;
   font-weight: 6px;
   margin-bottom: 2rem;
@@ -244,4 +244,53 @@ p {
   border-radius: 50px;
   cursor: pointer;
   margin-top: 1rem;
+}
+
+/*Volunteer Section*/
+.volunteer-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  background-color: var(--colour-surface);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.volunteer-picture {
+  background-color: var(--colour-secondary);
+  border-radius: 8px;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--colour-on-secondary);
+  font-weight: bold;
+}
+
+/*Contact Us Styles*/
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  background-color: var(--colour-surface);
+  padding: 2rem;
+  border-radius: 8px;
+  align-items: start;
+}
+
+.contact-info {
+  padding-right: 1rem;
+}
+
+.map-placeholder {
+  background-color: var(--colour-accent);
+  color: #ffffff;
+  min-height: 300px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 22px;
 }
