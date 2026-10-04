@@ -1,9 +1,15 @@
 /* Custom Variables */
 :root {
   --primary-color: #F476b9;
+  --colour-on-primary: #290F1D;
   --secondary-color: #C9B0BE;
+  --colour-on-secondary: #1F191C;
   --accent-color: #2C82F2;
-  --bg-color: #F3F1F2;
+  --colour-on-accent: #0E1A2A;
+  --color-bg: #F3F1F2;
+  --colour-on-bg: #1D1C1B;
+  --colour-surface: #FAFAFA;
+  --colour-on-surface: #1C1C1C;
   --card-bg: #FAFAFA;
   --text-main: #333333;
   --text-muted: #666666;
@@ -22,8 +28,8 @@
 
 /*Body Styles*/
 body {
-    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
-    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
     color: var(--text-main);
     line-height: 1.6;
     display: flex;
