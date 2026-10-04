@@ -10,3 +10,152 @@
   --border-color: #000000;
   --focus-ring: #2980b9;
 }
+
+/*CSS Reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Body Styles*/
+body {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 10px 0;
+
+}
+
+h1, h2, h3 {
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.site-header {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--colour-on-primary);
+  transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.nav-menu a.active {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/*Homepage Styles*/
+/*Hero Section*/
+.hero-section {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--colour-surface);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 0 0 300px;
+  background-color: var(--colour-secondary);
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+/*Urgent Needs Section*/
+.urgent-needs-banner {
+  background-colour: var (--colour-accent);
+  padding: 1rem 1.5rem;
+  font-weight: 6px;
+  margin-bottom: 2rem;
+}
+
+/*Statistics Section*/
+.statistics-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.stat-card {
+  background-color: var(--colour-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--colour-on-secondary);
+}
