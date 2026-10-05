@@ -120,6 +120,14 @@ p {
   padding: 0 1rem;
 }
 
+.main-content {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem;
+}
+
 /*Homepage Styles*/
 /*Hero Section*/
 .hero-section {
@@ -132,19 +140,27 @@ p {
 }
 
 .hero-content {
-  flex: 1;
+  flex: 1 1 50%;
 }
 
 .hero-image {
-  flex: 0 0 350px;
-  height: 200px;
+  flex: 0 0 500px;
+  height: 350px;
   border-radius: 12px;
   overflow: hidden;
+}
+
+.hero-image picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
 
@@ -181,11 +197,50 @@ p {
 
 /*Ask For Help Page Styles*/
 .emergency-banner {
-  background-color: var(--colour-accent);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
+  width: 100%;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 0.85rem 0;
+}
+
+.banner-content p {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+.page-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.form-card {
+  background-color: var(--colour-surface);
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-card h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.help-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .form-container {
@@ -196,24 +251,58 @@ p {
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-weight: 600;
+  color: var(--colour-on-surface);
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--colour-border);
-  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   font-family: var(--font-body);
   font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(44, 130, 242, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-submit {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  align-self: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
 }
 
 /*Donate Page Styles*/
