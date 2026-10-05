@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hands of Hope | Contact Us</title>
+
+    <!-- CSS link -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <!-- Headings -->
-    <header>
+    <header class="header">
         <div class="logo">
             <img src="images/hands-of-hope-logo.png">
         </div>
         <!-- Navigation menu -->
+        <div class="nav-container">
         <nav>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="help.html">Ask for help</a></li>
                 <li><a href="donate.html">Donate</a></li>
@@ -27,29 +31,43 @@
     <hr>
 
     <!-- Main Content Area -->
-    <main>
+    <main class="main-container">
         <!-- Contact Details Section -->
-        <section class="contact-details">
-            <h2>Contact Details</h2>
-            <text>
-                <h3>Main Office (Johannesburg)</h3>
-                <p>Email: info@handsofhope.org.za</p>
-                <p>Phone: +27 12 987 0123</p>
-            </text>
+        <section class="contact-layout">
 
-            <text>
-                <h3>Donation Drop-off</h3>
-                <p>Email: donations@handsofhope.org.za</p>
-                <p>Phone: +27 12 345 0456</p>
-            </text>
-        </section>
+            <div class="contact-details">
+                <h1>Contact Us</h1>
+                <h2>Get in Touch with Our Team</h2>
+                <p>If you have any questions or would like to get in touch with our team, please use the information below:</p>
 
-        <hr>
+                <ul style="list-style-type: none; padding-left: 0; margin: 1.5rem 0;">
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Phone Number:</strong><br>
+                        +27 11 - (123) - (456)
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Email Address:</strong><br>
+                        <a href="info@handsofhope.org.za" style="colour: var(--color-on-bg);">info@handsofhope.org.za</a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Main Drop-off & Food Pantry Location:</strong><br>
+                        123 Hope Street, Johannesburg, Gauteng, South Africa
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Operating Hours:</strong><br>
+                        Monday - Friday: 8am to 5pm <br>
+                        Saturday: 9am to 1pm
+                    </li>
+                </ul>
+            </div>
 
-        <!-- Location Map Section -->
-        <section class="map-section">
-            <h2>Drop-off Location</h2>
-            <p>[Insert map image here]</p>
+            <div class="map-container">
+                <h2>Drop off Location</h2>
+
+                <div class="map-placeholder">
+                    <!--ADD MAP-->
+                </div>
+            </div>
         </section>
     </main>
 
