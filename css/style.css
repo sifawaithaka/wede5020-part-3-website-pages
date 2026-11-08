@@ -666,3 +666,26 @@ p {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.response-card {
+  background-color: #e8f5e9;
+  border: 2px solid var(--colour-on-primary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--text-main);
+}
+
+.response-card h3 {
+  color: var(--colour-on-primary);
+  margin-bottom: 0.5rem;
+}
+
+.response-card ul {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+}
+
+.response-card li {
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,6 @@
+# Instruct all search engine crawlers (Google, Bing, etc.)
+User-agent: *
+Allow: /
+
+# Direct crawlers to your sitemap XML file
+Sitemap: https://www.handsofhope.org.za/sitemap.xml
