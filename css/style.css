@@ -582,3 +582,87 @@ p {
   font-weight: bold;
   font-size: 22px;
 }
+
+/* Gallery Layout Grid in Volunteer Section */
+.gallery-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox Modal Base (Hidden by Default) */
+.lightbox-modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Display class added dynamically via JavaScript DOM Manipulation */
+.lightbox-modal.active {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.lightbox-content {
+  max-width: 85%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+  margin-top: 1rem;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
