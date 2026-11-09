@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands of Hope | Photo Gallery</title>
+    <meta name="description" content="Explore photos of Hands of Hope food drives, volunteer activities, and community emergency relief efforts across Gauteng.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Hands of Hope Logo.jpg" alt="Hands of Hope Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="help.html">Ask for help</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="volunteer.html">Get Involved</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="page-content">
+        <section class="gallery-section">
+            <h1>Our Community in Action</h1>
+            <p>Click on any photo below to view it in full screen.</p>
+
+            <!-- Image Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/Donations to be given out.jpg" alt="Packed donations ready to be given out" class="lightbox-trigger">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Group of Volunteers.jpg" alt="Hands of Hope community volunteers" class="lightbox-trigger">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Donations.jpg" alt="Volunteers packing resources" class="lightbox-trigger">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Loading donations.jpg" alt="Donations waiting to be loaded into trucks" class="lightbox-trigger">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Food bank.jpg" alt="Weekly food pantry distribution event" class="lightbox-trigger">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Teaching kids.jpg" alt="Weekly food pantry distribution event" class="lightbox-trigger">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Donations to be given out.jpg" alt="Weekly food pantry distribution event" class="lightbox-trigger">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Volunteer with kids.jpg" alt="Weekly food pantry distribution event" class="lightbox-trigger">
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal Container -->
+        <div id="lightboxModal" class="lightbox-modal">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content" id="lightboxImg" alt="Expanded Gallery Image">
+            <div id="lightboxCaption" class="lightbox-caption"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Hands of Hope. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
