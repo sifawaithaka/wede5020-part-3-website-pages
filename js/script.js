@@ -1,42 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
   
-  // 1. SELECT DOM ELEMENTS
+  // SELECT DOM ELEMENTS
   const lightboxModal = document.getElementById("lightboxModal");
   const lightboxImg = document.getElementById("lightboxImg");
   const lightboxCaption = document.getElementById("lightboxCaption");
   const closeBtn = document.querySelector(".lightbox-close");
   const galleryTriggers = document.querySelectorAll(".lightbox-trigger");
 
-  // 2. ADVANCED DOM MANIPULATION & EVENT HANDLING
+  //ADVANCED DOM MANIPULATION & EVENT HANDLING
   galleryTriggers.forEach((image) => {
     image.addEventListener("click", (event) => {
-      const clickedImage = event.target;
-      
-      // Dynamic DOM manipulation: Copy src and alt attributes to the modal element
-      lightboxImg.src = clickedImage.src;
-      lightboxImg.alt = clickedImage.alt;
-      lightboxCaption.textContent = clickedImage.alt;
-
-      // Toggle modal visibility using class manipulation
-      lightboxModal.classList.add("active");
-      document.body.style.overflow = "hidden"; // Prevent page scrolling while lightbox is open
+      if (lightboxModal && lightboxImg && lightboxCaption) {
+        lightboxModal.style.display = "block";
+        lightboxImg.src = image.src;
+        lightboxCaption.textContent = image.alt || "Gallery image";
+      }
     });
   });
 
-  // 3. CLOSE LIGHTBOX EVENT LISTENERS
+  // CLOSE LIGHTBOX EVENT LISTENERS
   const closeLightbox = () => {
     if (lightboxModal) {
-      lightboxModal.classList.remove("active");
-      document.body.style.overflow = "auto"; // Re-enable background scrolling
+      lightboxModal.style.display = "none";
+      lightboxImg.src = "";
+      lightboxCaption.textContent = "";
     }
   };
 
-  // Close when clicking the 'X' button
   if (closeBtn) {
     closeBtn.addEventListener("click", closeLightbox);
   }
 
-  // Close when clicking outside the image (overlay area)
   if (lightboxModal) {
     lightboxModal.addEventListener("click", (e) => {
       if (e.target === lightboxModal) {
@@ -44,12 +38,43 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  // Keyboard Accessibility: Close lightbox when pressing 'Escape'
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && lightboxModal.classList.contains("active")) {
-      closeLightbox();
-    }
-  });
-
 });
+
+// Volunteer Form summary
+const volunteerForm = document.getElementById("volunteerForm");
+
+if (volunteerForm) {
+  volunteerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("vol-name")?.value.trim() || "";
+    const email = document.getElementById("vol-email")?.value.trim() || "";
+    const phone = document.getElementById("vol-phone")?.value.trim() || "";
+
+    const roleSelect = document.getElementById("role");
+    const roleName = roleSelect && roleSelect.selectedIndex >= 0
+      ? roleSelect.options[roleSelect.selectedIndex].text
+      : "Not selected";
+
+    const hoursPerWeek = parseFloat(document.getElementById("hours")?.value) || 0;
+    const totalWeeks = parseFloat(document.getElementById("weeks")?.value) || 0;
+
+    const totalHours = hoursPerWeek * totalWeeks;
+    const estimatedMealsServed = totalHours * 15;
+
+    const summaryData = {
+      name,
+      email,
+      phone,
+      roleName,
+      hoursPerWeek,
+      totalWeeks,
+      totalHours,
+      estimatedMealsServed,
+      submissionDate: new Date().toLocaleDateString("en-ZA")
+    };
+
+    sessionStorage.setItem("volunteerSummary", JSON.stringify(summaryData));
+    window.location.href = "summary.html";
+  });
+}

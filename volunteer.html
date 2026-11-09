@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hands of Hope | Volunteer</title>
-    <meta name="description" content="Join Hands of Hope as a volunteer and make a meaningful impact in the community. Sign up to help with food pantry operations, delivery, packing, and more.">
-
-    <!-- CSS link -->
+    <meta name="description" content="Join Hands of Hope as a volunteer and make a meaningful impact in the community.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="site-header">
         <div class="nav-container">
             <div class="logo">
@@ -22,63 +19,63 @@
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="help.html">Ask for help</a></li>
+                    <li><a href="help.html">Help</a></li>
                     <li><a href="donate.html">Donate</a></li>
-                    <li><a href="volunteer.html" class="active">Get Involved</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content Area -->
     <main class="page-content">
         <section class="volunteer-layout">
-            <!-- Volunteer Sign-Up Form -->
             <div class="volunteer-form-card">
                 <h1>Volunteer Sign-Up Form</h1>
-                <p class="section-subtitle">Join our team of volunteers and make a difference in the community!</p>
 
-                <form action="#" method="post" class="volunteer-form">
+                <form id="volunteerForm" class="volunteer-form" method="post">
                     <div class="form-group">
-                        <label for="vol-name">Full Name:</label>
-                        <input type="text" id="vol-name" name="vol_name" placeholder="Enter your full name" required>
+                        <label for="vol-name">Full Name</label>
+                        <input type="text" id="vol-name" name="vol-name" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="vol-email">Email Address:</label>
-                        <input type="email" id="vol-email" name="vol_email" placeholder="Enter your email address" required>
+                        <label for="vol-email">Email Address</label>
+                        <input type="email" id="vol-email" name="vol-email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="vol-phone">Phone Number:</label>
-                        <input type="tel" id="vol-phone" name="vol_phone" placeholder="Enter your phone number" required>
+                        <label for="vol-phone">Phone Number</label>
+                        <input type="tel" id="vol-phone" name="vol-phone" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="role">Preferred Role:</label>
-                        <select id="role" name="role">
-                            <option value="pantry">Food Pantry Volunteer</option>
-                            <option value="driver">Delivery Driver</option>
-                            <option value="packing">Packing and Sorting</option>
-                            <option value="admin">Admin Help</option>
+                        <label for="role">Preferred Role</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select a role</option>
+                            <option value="food-pantry">Food Pantry Support</option>
+                            <option value="packing">Packing & Sorting</option>
+                            <option value="delivery">Delivery Driver</option>
+                            <option value="admin">Administration</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="btn-submit">Sign Up</button>
+                    <div class="form-group">
+                        <label for="hours">Hours available per week</label>
+                        <input type="number" id="hours" name="hours" min="1" max="40" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weeks">How many weeks are you available?</label>
+                        <input type="number" id="weeks" name="weeks" min="1" max="52" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit</button>
                 </form>
-
-                <div id="volunteerResponse" class="response-card" style="display: none;"></div>
-
             </div>
 
-            <!-- Promotional Picture Section -->
             <div class="volunteer-image-card">
-                <picture>
-                    <source srcset="images/Volunteer.jpg" type="image/jpeg">
-                    <img src="images/Volunteer.jpg" alt="Hands of Hope Volunteers joining hands">
-                </picture>
+                <img src="images/volunteer.jpg" alt="Volunteer helping in the community">
             </div>
         </section>
     </main>
@@ -89,12 +86,10 @@
         <div id="lightboxCaption" class="lightbox-caption"></div>
     </div>
 
-    <!-- Footer section -->
     <footer>
         <p>&copy; 2026 Hands of Hope. All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>
-
 </body>
 </html>
