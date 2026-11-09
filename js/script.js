@@ -78,3 +78,39 @@ if (volunteerForm) {
     window.location.href = "summary.html";
   });
 }
+
+const donateForm = document.getElementById("donateForm");
+
+if (donateForm) {
+    donateForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // 1. Capture Form Inputs
+        const name = document.getElementById("donor-name").value.trim();
+        const email = document.getElementById("donor-email").value.trim();
+        const amount = parseFloat(document.getElementById("custom-amount").value) || 0;
+        const donateTypeSelect = document.getElementById("donation-type");
+        const donateType = donateTypeSelect.options[donateTypeSelect.selectedIndex].text;
+
+        // 2. Perform Calculations (e.g., R25 per community meal provided)
+        const mealsProvided = Math.floor(amount / 25);
+        const refNumber = "HOH-DON-" + Math.floor(100000 + Math.random() * 900000);
+
+        // 3. Store Object in sessionStorage
+        const summaryData = {
+            refNumber,
+            name,
+            email,
+            amount: amount.toFixed(2),
+            donateType,
+            mealsProvided,
+            submissionDate: new Date().toLocaleDateString("en-ZA"),
+            isDonation: true // Flag to identify this as a donation receipt
+        };
+
+        sessionStorage.setItem("volunteerSummary", JSON.stringify(summaryData));
+
+        // 4. Redirect to summary.html
+        window.location.href = "summary.html";
+    });
+}

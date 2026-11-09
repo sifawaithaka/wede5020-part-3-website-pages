@@ -15,43 +15,57 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/Hands of Hope Logo.jpg">
+                    <img src="images/Hands of Hope Logo.jpg" alt="Hands of Hope Logo">
                 </a>
             </div>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="help.html">Ask for help</a></li>
-                <li><a href="donate.html" class="active">Donate</a></li>
-                <li><a href="volunteer.html">Get Involved</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="help.html">Ask for help</a></li>
+                    <li><a href="donate.html" class="active">Donate</a></li>
+                    <li><a href="volunteer.html">Get Involved</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- Main Content Area -->
     <main class="main-container">
-        <!-- Donation Amount Selection -->
-        <section class="donation-section">
-            <h1>Monetary Donations</h1>
-            <h2>Select an amount that you would like to donate:</h2>
-            
-            <div class="donation-grid">
-                <button type="button" class="donation-amount-btn">R50</button>
-                <button type="button" class="donation-amount-btn">R100</button>
-                <button type="button" class="donation-amount-btn">R200</button>
-                <button type="button" class="donation-amount-btn">Custom Amount</button>
-            </div>
+        <!-- Form for monetary donation processing -->
+        <form id="donateForm" action="summary.html" method="GET">
+            <section class="donation-section">
+                <h1>Monetary Donations</h1>
+                <h2>Enter your details and donation amount below:</h2>
+                
+                <div class="form-group" style="max-width: 400px; margin: 0 auto 1.5rem auto;">
+                    <label for="donor-name">Full Name / Organization:</label>
+                    <input type="text" id="donor-name" name="donor_name" placeholder="Enter your name" required>
+                </div>
 
-            <div class="form-group" style="max-width: 400px; margin: 0 auto 1.5rem auto;">
-                <label for="custom-amount">Custom Amount:</label>
-                <input type="number" id="custom-amount" name="custom_amount" placeholder="Enter custom amount">
-            </div>
+                <div class="form-group" style="max-width: 400px; margin: 0 auto 1.5rem auto;">
+                    <label for="donor-email">Email Address:</label>
+                    <input type="email" id="donor-email" name="donor_email" placeholder="Enter your email" required>
+                </div>
 
-            <button type="submit" class="btn-donate-submit">Donate</button>
-        </section>
+                <div class="form-group" style="max-width: 400px; margin: 0 auto 1.5rem auto;">
+                    <label for="custom-amount">Donation Amount (ZAR):</label>
+                    <input type="number" id="custom-amount" name="custom_amount" min="10" placeholder="Enter amount (e.g. 250)" required>
+                </div>
+
+                <div class="form-group" style="max-width: 400px; margin: 0 auto 1.5rem auto;">
+                    <label for="donation-type">Contribution Fund:</label>
+                    <select id="donation-type" name="donation_type" required>
+                        <option value="Emergency Food Parcel Fund">Emergency Food Parcel Fund</option>
+                        <option value="Weekly Community Pantry">Weekly Community Pantry</option>
+                        <option value="General Relief">General Emergency Relief</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-donate-submit">Generate Donation Statement</button>
+            </section>
+        </form>
 
         <!-- Detailed Non-Perishable Goods List -->
         <section class="form-container" style="margin-top: 2rem;">
@@ -70,5 +84,8 @@
     <footer>
         <p>&copy; 2026 Hands of Hope. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript Link -->
+    <script src="js/script.js"></script>
 </body>
 </html>
